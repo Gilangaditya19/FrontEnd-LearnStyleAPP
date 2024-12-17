@@ -1,0 +1,731 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learning Style Quiz Test</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="test.css">
+    <link rel="icon" href="./assets/brand/learnstylelogo.png" type="image/png">
+
+    <style>
+        .options {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            margin-bottom: 2em;
+        }
+
+        .options div {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            margin: 0 10px;
+            border: 2px solid #D8A25E;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #F4E3D3, #F9D3A5);
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .options div:hover {
+            background: linear-gradient(135deg, #F9D3A5, #EFB98C);
+            transform: scale(1.05);
+        }
+
+        .options div.selected {
+            background: linear-gradient(135deg, #A04747, #7A2F2F);
+            color: white;
+            border: 2px solid #7A2F2F;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header data-bs-theme="light">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light">
+            <div class="container-fluid">
+                <!-- Gambar di samping kiri judul navbar -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="assets/brand/learnstylelogo.png" alt="Logo" style="height: 40px; width: auto; margin-right: 10px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html" style="color: black;">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#tentang" style="color: black;">Tentang</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#informasi" style="color: black;">Informasi</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="wrapper">
+        <div class="wrap active" id="q1">
+            <div class="text-center pb-4">
+                <div class="h5 font-weight-bold"><span id="number"> </span>1 of 30</div>
+            </div>
+            <div class="h4 font-weight-bold mb-2"> 1. <span style="text-align: justify">Saya belajar paling efektif ketika mendengarkan penjelasan verbal dari seseorang.</span></div>
+            <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+            <div class="options">
+                <div data-value="1">1</div>
+                <div data-value="2">2</div>
+                <div data-value="3">3</div>
+                <div data-value="4">4</div>
+            </div>
+            <div class="d-flex justify-content-between pt-2">
+                <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+            </div>
+        </div>
+
+        <div class="wrap" id="q2">
+            <div class="text-center pb-4">
+                <div class="h5 font-weight-bold"><span id="number"> </span>2 of 30</div>
+            </div>
+            <div class="h4 font-weight-bold"> 2. Saya lebih cepat memahami materi ketika penjelasan diberikan secara lisan, bukan melalui teks.</div>
+            <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>            
+            <div class="options">
+                <div data-value="1">1</div>
+                <div data-value="2">2</div>
+                <div data-value="3">3</div>
+                <div data-value="4">4</div>
+            </div>
+            <div class="d-flex justify-content-between pt-2">
+                <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+            </div>
+        </div>
+
+        <div class="wrap" id="q3">
+            <div class="text-center pb-4">
+                <div class="h5 font-weight-bold"><span id="number"> </span>3 of 30</div>
+            </div>
+            <div class="h4 font-weight-bold"> 3. Saya lebih mudah mengingat informasi jika saya mendengarnya diulang-ulang.</div>
+            <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>            
+            <div class="options">
+                <div data-value="1">1</div>
+                <div data-value="2">2</div>
+                <div data-value="3">3</div>
+                <div data-value="4">4</div>
+            </div>
+            <div class="d-flex justify-content-between pt-2">
+                <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+            </div>
+        </div>
+        <div class="wrap" id="q4">
+            <div class="text-center pb-4">
+                <div class="h5 font-weight-bold"><span id="number"> </span>4 of 30</div>
+            </div>
+            <div class="h4 font-weight-bold"> 4. Saya merasa lebih fokus saat mendengarkan podcast atau rekaman audio terkait materi pelajaran.</div>
+            <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>            
+            <div class="options">
+                <div data-value="1">1</div>
+                <div data-value="2">2</div>
+                <div data-value="3">3</div>
+                <div data-value="4">4</div>
+            </div>
+            <div class="d-flex justify-content-between pt-2">
+                <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+            </div>
+        </div>
+
+        <div class="wrap" id="q5">
+            <div class="text-center pb-4">
+                <div class="h5 font-weight-bold"><span id="number"> </span>5 of 30</div>
+            </div>
+            <div class="h4 font-weight-bold"> 5. Saya cenderung lebih banyak belajar melalui diskusi verbal ketimbang membaca.</div>
+            <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>            
+            <div class="options">
+                <div data-value="1">1</div>
+                <div data-value="2">2</div>
+                <div data-value="3">3</div>
+                <div data-value="4">4</div>
+            </div>
+            <div class="d-flex justify-content-between pt-2">
+                <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+            </div>
+        </div>
+
+        <div class="wrap" id="q6">
+            <div class="text-center pb-4">
+                <div class="h5 font-weight-bold"><span id="number"> </span>6 of 30</div>
+            </div>
+            <div class="h4 font-weight-bold"> 6. Saya suka merekam pelajaran atau instruksi agar bisa mendengarkannya kembali saat belajar.</div>
+            <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>            
+            <div class="options">
+                <div data-value="1">1</div>
+                <div data-value="2">2</div>
+                <div data-value="3">3</div>
+                <div data-value="4">4</div>
+            </div>
+            <div class="d-flex justify-content-between pt-2">
+                <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+            </div>
+        </div>
+
+        <div class="wrap" id="q7">
+            <div class="text-center pb-4">
+                <div class="h5 font-weight-bold"><span id="number"> </span>7 of 30</div>
+            </div>
+            <div class="h4 font-weight-bold"> 7. Saya merasa lebih baik saat belajar dengan cara mendengarkan, misalnya melalui ceramah atau buku audio.</div>
+            <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>            
+            <div class="options">
+                <div data-value="1">1</div>
+                <div data-value="2">2</div>
+                <div data-value="3">3</div>
+                <div data-value="4">4</div>
+            </div>
+            <div class="d-flex justify-content-between pt-2">
+                <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+            </div>
+        </div>
+
+        <div class="wrap" id="q8">
+            <div class="text-center pb-4">
+                <div class="h5 font-weight-bold"><span id="number"> </span>8 of 30</div>
+            </div>
+            <div class="h4 font-weight-bold"> 8. Suara latar seperti musik instrumental atau percakapan membantu saya tetap fokus saat belajar.</div>
+            <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>            
+            <div class="options">
+                <div data-value="1">1</div>
+                <div data-value="2">2</div>
+                <div data-value="3">3</div>
+                <div data-value="4">4</div>
+            </div>
+            <div class="d-flex justify-content-between pt-2">
+                <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+            </div>
+        </div>
+
+        <div class="wrap" id="q9">
+            <div class="text-center pb-4">
+                <div class="h5 font-weight-bold"><span id="number"> </span>9 of 30</div>
+            </div>
+            <div class="h4 font-weight-bold"> 9. Saya lebih cepat mengingat informasi yang saya dengar daripada yang saya baca.</div>
+            <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>            
+            <div class="options">
+                <div data-value="1">1</div>
+                <div data-value="2">2</div>
+                <div data-value="3">3</div>
+                <div data-value="4">4</div>
+            </div>
+            <div class="d-flex justify-content-between pt-2">
+                <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+            </div>
+        </div>
+
+        <div class="wrap" id="q10">
+            <div class="text-center pb-4">
+                <div class="h5 font-weight-bold"><span id="number"> </span>10 of 30</div>
+            </div>
+            <div class="h4 font-weight-bold"> 10. Saya lebih suka belajar melalui ceramah atau kuliah daripada membaca buku teks.</div>
+            <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>            
+            <div class="options">
+                <div data-value="1">1</div>
+                <div data-value="2">2</div>
+                <div data-value="3">3</div>
+                <div data-value="4">4</div>
+            </div>
+            <div class="d-flex justify-content-between pt-2">
+                <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+            </div>
+        </div>
+
+            <div class="wrap" id="q11">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>11 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 11. Saya lebih mudah memahami materi pelajaran jika ditunjukkan dengan diagram atau grafik.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>                
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q12">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>12 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 12. Saya suka menggunakan warna berbeda saat mencatat untuk membedakan ide atau informasi.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q13">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>13 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 13. Saya sering mengandalkan gambar mental untuk memahami konsep yang baru.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q14">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>14 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 14. Saya merasa lebih mudah mengingat informasi jika disertai dengan visual yang jelas.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q15">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>15 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 15. Saya lebih suka membaca buku teks yang dilengkapi dengan gambar atau ilustrasi untuk mempermudah pemahaman.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q16">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>16 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 16. Melihat diagram atau peta konsep sangat membantu saya dalam mengorganisasi informasi.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q17">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>17 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 17. Saya lebih mudah memahami pelajaran jika instruksi atau materi disampaikan melalui video atau animasi.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q18">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>18 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 18. Saya senang membuat mind maps atau peta konsep untuk merangkum apa yang telah saya pelajari.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q19">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>19 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 19. Saya lebih tertarik pada pelajaran yang disertai dengan infografis atau poster visual yang informatif.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q20">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>20 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 20. Saya sering membayangkan visualisasi atau gambar untuk membantu mengingat informasi yang saya pelajari.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q21">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>21 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 21. Saya lebih baik belajar dengan melakukan aktivitas fisik langsung, seperti percakapan atau eksperimen.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q22">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>22 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 22. Saya lebih mudah memahami konsep baru jika saya terlibat dalam latihan praktis atau role-play.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q23">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>23 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 23. Saya merasa lebih mudah mengingat informasi jika saya mempraktikkan sesuatu dengan tangan saya. </div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q24">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>24 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 24. Saya lebih suka belajar dengan cara mencoba sendiri, misalnya dengan membangun atau merakit objek.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q25">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>25 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 25. Belajar yang melibatkan gerakan fisik, seperti berjalan sambil belajar, membuat saya lebih fokus.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q26">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>26 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 26. Saya lebih suka mengikuti demonstrasi atau latihan fisik daripada sekadar mendengarkan penjelasan.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q27">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>27 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 27. Saya merasa kurang efektif belajar jika harus duduk diam terlalu lama.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q28">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>28 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 28. Saya sering mengingat informasi dengan lebih baik ketika saya mengaitkan pembelajaran dengan pengalaman fisik.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q29">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>29 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 29. Saya cenderung lebih aktif saat belajar, seperti menulis sambil bergerak atau berdiskusi dengan teman.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                    <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary btn-next">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+
+            <div class="wrap" id="q30">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"><span id="number"> </span>30 of 30</div>
+                </div>
+                <div class="h4 font-weight-bold"> 30. Aktivitas yang melibatkan tangan atau fisik, seperti membuat model atau eksperimen, sangat membantu saya memahami materi.</div>
+                <small> <b>*) 1: Sangat Tidak Setuju, 2: Tidak Setuju, 3: Setuju, 4: Sangat Setuju</b></small>
+                <div class="options">
+                    <div data-value="1">1</div>
+                    <div data-value="2">2</div>
+                    <div data-value="3">3</div>
+                    <div data-value="4">4</div>
+                </div>
+            <div class="d-flex justify-content-between pt-2">
+                <button class="btn btn-primary btn-prev mx-3"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                <button id ="submit" class="btn btn-primary btn-next">Submit <span class="fas fa-arrow-right"></span> </button>
+            </div>
+        </div>
+
+        <div class="wrap" id="q30">
+            <div class="text-center pb-4">
+                <div class="h4 font-weight-bold mb-3">Selamat kamu telah menyelesaikan semua soal</div>
+                <svg class="bd-placeholder-img rounded-circle" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <image width="100%" height="100%" href="assets/Images/good.png" />
+                </svg>
+                <div class="d-flex justify-content-center pt-2 mt-3">
+                    <button class="btn btn-primary btn-next" onclick="window.location.href='result.html'">View Result<span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let questions = document.querySelectorAll('.wrap');
+            let currentQuestion = 0;
+            let selectedOptions = Array(questions.length).fill(null); // Menyimpan status pilihan tiap soal
+            let answers = new Array(30).fill(0);
+
+            // Fungsi untuk mengupdate status 'selected' pada soal
+            function updateSelectedOptions() {
+                const options = questions[currentQuestion].querySelectorAll('.options div');
+                options.forEach(option => {
+                    const value = option.getAttribute('data-value');
+                    if (selectedOptions[currentQuestion] === value) {
+                        option.classList.add('selected');  // Menambahkan kelas 'selected' pada pilihan yang sudah dipilih
+                    } else {
+                        option.classList.remove('selected');  // Menghapus kelas 'selected' pada pilihan yang tidak dipilih
+                    }
+                });
+            }
+
+            // Event listener untuk setiap pilihan soal
+            document.querySelectorAll('.options div').forEach(option => {
+                option.addEventListener('click', function () {
+                    const questionIndex = Array.from(option.closest('.wrap').parentElement.children).indexOf(option.closest('.wrap'));
+                    selectedOptions[questionIndex] = option.getAttribute('data-value');
+                    answers[questionIndex] = parseInt(option.getAttribute('data-value'));
+                    updateSelectedOptions();
+                });
+            });
+
+            // Fungsi untuk berpindah ke soal berikutnya
+            function goToNextQuestion() {
+                if (currentQuestion < questions.length - 1) {
+                    questions[currentQuestion].style.left = '-650px'; // Slide current question out to the left
+                    currentQuestion++;
+                    questions[currentQuestion].style.left = '650px'; // Initially move the next question offscreen to the right
+                    setTimeout(() => {
+                        questions[currentQuestion].style.left = '50px'; // Slide it to center
+                        updateSelectedOptions(); // Update pilihan yang dipilih setelah soal berpindah
+                    }, 50);
+                }
+            }
+
+            // Fungsi untuk berpindah ke soal sebelumnya
+            function goToPreviousQuestion() {
+                if (currentQuestion > 0) {
+                    questions[currentQuestion].style.left = '650px'; // Slide current question out to the right
+                    currentQuestion--;
+                    questions[currentQuestion].style.left = '-650px'; // Initially move the previous question offscreen to the left
+                    setTimeout(() => {
+                        questions[currentQuestion].style.left = '50px'; // Slide it to center
+                        updateSelectedOptions(); // Update pilihan yang dipilih setelah soal berpindah
+                    }, 50);
+                }
+            }
+
+            // Event listeners untuk tombol "Next" dan "Previous"
+            document.querySelectorAll('.btn-next').forEach(button => {
+                button.addEventListener('click', goToNextQuestion);
+            });
+
+            document.querySelectorAll('.btn-prev').forEach(button => {
+                button.addEventListener('click', goToPreviousQuestion);
+            });
+
+            document.getElementById('submit').addEventListener('click', function () {
+                if (answers.includes(0)) {
+                    alert("Mohon jawab semua pertanyaan sebelum mengirim!");
+                    return;
+                }
+
+                console.log("Mengirim data:", answers);
+
+                fetch("https://backendapi-modelmachinelearning-q-723845485856.asia-southeast2.run.app/predict", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ answers: answers })
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! Status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log("Hasil Prediksi:", data);
+                        localStorage.setItem("result", JSON.stringify(data));
+                        window.location.href = "result.html";
+                    })
+                    .catch(error => {
+                        console.error("Terjadi kesalahan:", error);
+                        alert("Gagal mengirim data. Silakan coba lagi.");
+                    });
+            });
+            updateSelectedOptions();
+        });
+
+            </script>
+        </body>
+
+        </html>

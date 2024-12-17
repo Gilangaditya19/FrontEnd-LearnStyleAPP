@@ -1,0 +1,192 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #343131;
+}
+
+body {
+  height: 100%; /* Membuat body dan html memiliki tinggi penuh */
+  margin: 0; /* Menghilangkan margin default */
+  display: flex; /* Menggunakan flexbox untuk memudahkan penataan elemen */
+  justify-content: center;
+  background: white;
+  align-items: center;
+}
+
+.wrapper {
+  max-width: 600px;
+  width: 100%; /* Membuat wrapper bisa menyesuaikan lebar kontainer */
+  margin: 0; /* Menghilangkan margin yang mungkin mengganggu */
+  padding: 30px;
+  border-radius: 20px;
+  background: #eedf7a;
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.wrap {
+  width: 500px;
+  position: absolute;
+  left: 650px; /* Hide all questions off-screen initially */
+  transition: left 0.6s ease-in-out;
+}
+
+.wrap.active {
+  left: 40px; /* Center the active question */
+}
+
+.h4 {
+  margin: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  height: 20px;
+  width: 20px;
+  background-color: #d8a25e;
+  border: 2px solid #444;
+  border-radius: 50%;
+}
+
+.btn.btn-primary {
+  background-color: #a04747;
+  border: 1px solid #a04747;
+}
+
+.btn {
+  background-color: inherit;
+  border: 1px solid rgb(255, 136, 0);
+  border-radius: 20px;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+.btn:hover {
+  background-color: #343131;
+  color: white;
+}
+
+.fa-arrow-right,
+.fa-arrow-left {
+  transition: 0.2s ease-in all;
+}
+
+.btn.btn-primary:hover .fa-arrow-right {
+  transform: translate(8px);
+}
+
+.btn.btn-primary:hover .fa-arrow-left {
+  transform: translate(-8px);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+  background-color: inherit;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #a04747;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #000;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+  background-color: #fff;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.dark-theme {
+  background-color: #222;
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 20px;
+    margin: 40px auto;
+    height: max-content;
+  }
+
+  .wrap {
+    width: 90%;
+    /* Menyesuaikan ukuran lebar pertanyaan di layar kecil */
+  }
+
+  .h4 {
+    font-size: 1.2rem;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+}

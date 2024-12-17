@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <script src="assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>Materi Learning Style</title>
+    <link rel="icon" href="assets/brand/learnstylelogo.png" type="image/png">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #EEDF7A;
+            --bd-violet-rgb: #EEDF7A;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: #A04747;
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #A04747;
+            --bs-btn-hover-border-color: #A04747;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #D8A25E;
+            --bs-btn-active-border-color: #D8A25E;
+        }
+
+        .btn-bd-secondary {
+            --bd-violet-bg: #A04747;
+            --bd-violet-rgb: #A04747;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #D8A25E;
+            --bs-btn-hover-border-color: #D8A25E;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #D8A25E;
+            --bs-btn-active-border-color: #D8A25E;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            /* Center horizontally */
+            align-items: center;
+            /* Center vertically */
+            height: 100vh;
+            /* Make container take the full height of the viewport */
+            margin: 0;
+        }
+
+        canvas {
+            max-width: 500px;
+            max-height: 500px;
+            width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 767px) {
+            header {
+                padding-top: 6rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+</head>
+
+<body>
+    <header data-bs-theme="light">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light">
+            <div class="container-fluid">
+                <!-- Gambar di samping kiri judul navbar -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html#card1">
+                    <img src="assets/brand/learnstylelogo.png" alt="Logo" style="height: 40px; width: auto; margin-right: 10px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                    <form class="d-flex">
+                        <button class="btn btn-bd-primary" type="button" onclick="window.location.href='index.html#card1'">Temukan Gaya Belajarmu Sekarang!</button>
+                    </form>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="container marketing mt-5">
+            <div class="row featurette">
+                <div class="col-md-7 d-flex flex-column">
+                    <h2 class="featurette-heading fw-normal lh-1">
+                        <span class="text-body-secondary">Gaya Belajar </span>Visual
+                    </h2>
+                    <p class="lead">
+                        Melihat dan mengamati adalah kunci untuk memahami informasi dengan lebih baik. Gaya belajar visualmu akan membantumu lebih mudah menyerap informasi melalui gambar, diagram, dan visual lainnya. Saatnya kamu memaksimalkan cara belajarmu!
+                    </p>
+                    <!-- Tips for Visual Learners -->
+                    <div class="mt-4 mb-3">
+                        <h4 class="fw-bold">Lingkungan Belajar yang Direkomendasikan:</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><b>Ruang yang Rapi dan Terorganisir:</b> Area yang bebas dari kekacauan membantu meminimalkan gangguan.</li>
+                            <li class="list-group-item"><b>Pencahayaan Terang dan Nyaman:</b> Gunakan pencahayaan alami atau lampu meja yang dapat diatur untuk mengurangi kelelahan mata.</li>
+                            <li class="list-group-item"><b>Papan Visual:</b> Tambahkan whiteboard atau papan gabus untuk diagram, grafik, dan pengingat.</li>
+                            <li class="list-group-item"><b>Bantuan Visual yang Dipersonalisasi:</b> Gunakan infografik, poster, atau peta pikiran visual untuk memperkuat pembelajaran.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-4 mb-3">
+                        <h4 class="fw-bold">Peralatan Belajar yang Direkomendasikan:</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><b>Tablet/Monitor Resolusi Tinggi:</b> Untuk menonton tutorial atau membuat desain dengan jelas.</li>
+                            <li class="list-group-item"><b>Tablet Gambar:</b> Cocok untuk mencatat dan membuat diagram. Contoh: Wacom, XP-Pen.</li>
+                            <li class="list-group-item"><b>Kartu Flash:</b> Ideal untuk menghafal menggunakan warna, gambar, atau pemicu visual.</li>
+                            <li class="list-group-item"><b>Perangkat Lunak Mind-Mapping:</b> Aplikasi seperti XMind, MindMeister, atau Miro.</li>
+                            <li class="list-group-item"><b>Proyektor atau Peralatan AR/VR:</b> Memperkaya pengalaman visual saat belajar atau presentasi.</li>
+                            <li class="list-group-item"><b>Perlengkapan Warna:</b> Stabilo, pena berwarna, dan sticky notes untuk membantu pengorganisasian.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-4 mb-3">
+                        <h4 class="fw-bold">Referensi untuk Belajar Lebih Lanjut:</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><b>Buku:</b>
+                                <ul>
+                                    <li>"Make It Stick: The Science of Successful Learning" oleh Peter C. Brown.</li>
+                                    <li>"Learning How to Learn" oleh Barbara Oakley (juga tersedia dalam bentuk kursus online).</li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item"><b>Kanal YouTube:</b>
+                                <ul>
+                                    <li>Khan Academy: Menyediakan konten edukasi yang menarik secara visual.</li>
+                                    <li>TED-Ed: Melibatkan pembelajar visual dengan animasi dan ilustrasi.</li>
+                                    <li>Kurzgesagt – In a Nutshell: Menjelaskan topik kompleks melalui visual yang menarik.</li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item"><b>Situs Web:</b>
+                                <ul>
+                                    <li>Coursera & EdX: Banyak kursus yang menawarkan materi visual, slide, dan ilustrasi.</li>
+                                    <li>Canva Design School: Tutorial untuk membuat visual yang kreatif.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-4 mb-3">
+                        <h4 class="fw-bold">Komunitas untuk Dijadikan Inspirasi:</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><b>Forum Online:</b>
+                                <ul>
+                                    <li>ArtStation: Cocok untuk pembelajar visual yang menyukai desain kreatif.</li>
+                                    <li>Mind Mapping Forums: Diskusikan ide dan alat bantu untuk organisasi visual.</li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item"><b>Kelompok Lokal dan Lokakarya:</b> Cari workshop desain grafis atau pembelajaran visual di daerah Anda melalui Meetup atau pusat peragaan seni dan pameran.</li>
+                            <li class="list-group-item"><b>Server Discord:</b> Bergabung dengan komunitas seputar produktivitas dan alat pembelajaran visual (misalnya, Notion, Obsidian).</li>
+                        </ul>
+                    </div>
+                    <div class="mt-4 mb-3">
+                        <h4 class="fw-bold">Tips untuk Pembelajar Visual:</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item">Gunakan gambar, diagram, dan mind maps untuk memvisualisasikan informasi.</li>
+                            <li class="list-group-item">Cobalah untuk menghubungkan ide dengan gambar atau visual lainnya agar lebih mudah diingat.</li>
+                            <li class="list-group-item">Gunakan warna yang berbeda untuk menandai hal-hal penting dalam catatan atau materi belajar.</li>
+                            <li class="list-group-item">Tonton video atau presentasi visual untuk memahami topik dengan lebih baik.</li>
+                            <li class="list-group-item">Buatlah catatan yang penuh dengan gambar dan sketsa untuk membantu memperjelas materi.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-5 d-flex justify-content-center align-items-center">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <image width="100%" height="100%" href="assets/Images/visual.png" />
+                    </svg>
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 d-flex flex-column order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">
+                        <span class="text-body-secondary">Gaya Belajar </span>Auditori
+                    </h2>
+                    <p class="lead">
+                        Mendengarkan adalah kunci untuk memahami informasi dengan lebih baik. Gaya belajar auditori membantumu lebih mudah menyerap informasi melalui suara, diskusi, dan musik. Saatnya kamu memaksimalkan cara belajarmu!
+                    </p>
+                    <div class="mt-4 mb-3">
+                        <h4 class="fw-bold">Lingkungan Belajar yang Direkomendasikan:</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><b>Ruang yang Tenang:</b> Minimalkan kebisingan dengan memilih ruang yang bebas dari gangguan suara luar.</li>
+                            <li class="list-group-item"><b>Headphone atau Earphone Berkualitas Tinggi:</b> Gunakan perangkat dengan fitur noise-canceling untuk mendengarkan audio secara jernih.</li>
+                            <li class="list-group-item"><b>Ruang dengan Akustik Baik:</b> Jika memungkinkan, pilih ruangan dengan gema rendah agar suara terdengar lebih jelas.</li>
+                            <li class="list-group-item"><b>Background Music:</b> Beberapa pembelajar audio terbantu dengan musik instrumental lembut sebagai latar saat belajar.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-4 mb-3">
+                        <h4 class="fw-bold">Peralatan Belajar yang Direkomendasikan:</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><b>Audio Books dan Podcast:</b> Platform seperti Audible, Spotify, atau Google Podcasts menyediakan banyak konten edukasi.</li>
+                            <li class="list-group-item"><b>Aplikasi Text-to-Speech:</b> Gunakan aplikasi seperti NaturalReader atau Speechify untuk mengubah teks menjadi suara.</li>
+                            <li class="list-group-item"><b>Voice Recorder:</b> Alat ini berguna untuk merekam pelajaran, ide, atau diskusi yang dapat diputar ulang.</li>
+                            <li class="list-group-item"><b>Smart Speaker:</b> Perangkat seperti Google Home atau Amazon Echo untuk mendengarkan materi belajar secara hands-free.</li>
+                            <li class="list-group-item"><b>Microphone Berkualitas:</b> Cocok untuk diskusi virtual atau merekam catatan belajar.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-4 mb-3">
+                        <h4 class="fw-bold">Referensi untuk Belajar Lebih Lanjut:</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><b>Buku:</b>
+                                <ul>
+                                    <li>"The Power of Habit" oleh Charles Duhigg (tersedia dalam versi audio).</li>
+                                    <li>"Atomic Habits" oleh James Clear, sangat cocok untuk memahami kebiasaan belajar.</li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item"><b>Podcast Edukasi:</b>
+                                <ul>
+                                    <li>TED Talks Daily: Beragam wawasan dengan gaya mendongeng yang menarik.</li>
+                                    <li>The EdSurge Podcast: Menjelajahi teknologi pendidikan.</li>
+                                    <li>Stuff You Should Know: Memberikan pengetahuan secara ringan melalui audio.</li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item"><b>Kursus Online:</b>
+                                <ul>
+                                    <li>Kursus dari platform seperti Skillshare atau Coursera yang menawarkan rekaman audio dari kelas.</li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item"><b>YouTube Channels:</b> Cari video yang mengutamakan narasi atau pembahasan verbal dibanding visual.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-4 mb-3">
+                        <h4 class="fw-bold">Komunitas untuk Dijadikan Inspirasi:</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><b>Komunitas AudioBook:</b> Platform seperti Goodreads memiliki kelompok diskusi khusus untuk buku audio.</li>
+                            <li class="list-group-item"><b>Grup Belajar Virtual:</b> Cari grup yang mengutamakan diskusi verbal di platform seperti Meetup atau Discord.</li>
+                            <li class="list-group-item"><b>Aplikasi Audio-Centric:</b>
+                                <ul>
+                                    <li>Clubhouse: Platform untuk bergabung dalam diskusi berbasis suara.</li>
+                                    <li>Twitter Spaces: Menyediakan ruang diskusi audio dengan berbagai topik.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>                    
+                    <!-- Tips for Auditory Learners -->
+                    <div class="mt-4 mb-3">
+                        <h4 class="fw-bold">Tips untuk Pembelajar Auditori:</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item">Dengarkan rekaman atau podcast terkait materi yang sedang dipelajari.</li>
+                            <li class="list-group-item">Bergabunglah dalam diskusi kelompok atau ajukan pertanyaan lisan untuk memperdalam pemahaman.</li>
+                            <li class="list-group-item">Gunakan alat bantu seperti musik atau suara latar untuk membantu konsentrasi.</li>
+                            <li class="list-group-item">Jelaskan materi yang kamu pelajari kepada orang lain untuk memperkuat ingatanmu.</li>
+                            <li class="list-group-item">Baca keras-keras catatan atau materi belajar untuk memaksimalkan pemahaman.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-5 d-flex justify-content-center align-items-center order-md-1">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <image width="100%" height="100%" href="assets/Images/auditori.png" />
+                    </svg>
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 d-flex flex-column">
+                    <h2 class="featurette-heading fw-normal lh-1">
+                        <span class="text-body-secondary">Gaya Belajar </span>Kinestetik
+                    </h2>
+                    <p class="lead">
+                        Belajar melalui gerakan dan aktivitas fisik akan membantu kamu memahami informasi dengan lebih baik. Gaya belajar kinestetik memungkinkan kamu menyerap informasi dengan praktik langsung dan interaksi fisik.
+                    </p>
+                    <div class="mt-4 mb-3">
+                        <h4 class="fw-bold">Lingkungan Belajar yang Direkomendasikan:</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><b>Ruang yang Luas dan Fleksibel:</b> Pilih ruang yang memungkinkan untuk bergerak bebas.</li>
+                            <li class="list-group-item"><b>Meja dan Kursi yang Ergonomis:</b> Gunakan meja berdiri atau kursi yang mendukung postur tubuh.</li>
+                            <li class="list-group-item"><b>Alat Peraga Fisik:</b> Siapkan benda-benda seperti model 3D, puzzle, atau alat peraga lainnya.</li>
+                            <li class="list-group-item"><b>Ruang Terbuka:</b> Jika memungkinkan, belajar di luar ruangan seperti taman atau tempat terbuka lainnya untuk suasana yang dinamis.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-4 mb-3">
+                        <h4 class="fw-bold">Peralatan Belajar yang Direkomendasikan:</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><b>Alat Tulis Manual:</b> Pena, pensil, dan buku catatan untuk mencatat langsung (lebih efektif daripada mengetik).</li>
+                            <li class="list-group-item"><b>Papan Tulis Pribadi:</b> Untuk mencatat ide atau menjelaskan materi dengan menggambar langsung.</li>
+                            <li class="list-group-item"><b>Permainan Edukasi:</b> Board games, flashcards fisik, atau simulasi interaktif.</li>
+                            <li class="list-group-item"><b>Model atau Alat Fisik:</b> Misalnya, model anatomi untuk belajar biologi, atau replika fisik untuk memahami konsep geometri.</li>
+                            <li class="list-group-item"><b>Alat Sensorik:</b> Stress ball atau fidget spinner untuk membantu fokus.</li>
+                            <li class="list-group-item"><b>Perangkat VR/AR:</b> Untuk pembelajaran interaktif yang memungkinkan eksplorasi langsung secara virtual.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-4 mb-3">
+                        <h4 class="fw-bold">Referensi untuk Belajar Lebih Lanjut:</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><b>Buku:</b>
+                                <ul>
+                                    <li>"Brain Rules" oleh John Medina, menjelaskan bagaimana aktivitas fisik memengaruhi pembelajaran.</li>
+                                    <li>"The Kinesthetic Classroom" oleh Traci Lengel & Mike Kuczala, penuh dengan strategi untuk pembelajaran berbasis gerakan.</li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item"><b>Kursus atau Workshop Praktik Langsung:</b>
+                                <ul>
+                                    <li>Udemy atau Skillshare: Cari kursus yang mengutamakan proyek langsung, seperti seni, kerajinan tangan, atau simulasi eksperimen.</li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item"><b>Video Tutorial Praktik:</b>
+                                <ul>
+                                    <li>YouTube Channels seperti DIY Creators (proyek DIY) atau CrashCourse dengan pendekatan aktif.</li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item"><b>Aplikasi Interaktif:</b>
+                                <ul>
+                                    <li>Kahoot! atau Quizlet Live: Permainan kuis interaktif yang melibatkan aktivitas langsung.</li>
+                                    <li>Tinkercad untuk belajar desain 3D dengan manipulasi langsung.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-4 mb-3">
+                        <h4 class="fw-bold">Komunitas untuk Dijadikan Inspirasi:</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item"><b>Workshop dan Pelatihan Langsung:</b> Cari kegiatan pelatihan lokal di Meetup atau Eventbrite, seperti seni, olahraga, atau kegiatan DIY.</li>
+                            <li class="list-group-item"><b>Kelompok Diskusi atau Proyek Kolaboratif:</b> Maker Communities: Bergabung dengan komunitas pembuat seperti Maker Faire atau Hackerspace.</li>
+                            <li class="list-group-item"><b>Komunitas Olahraga atau Seni:</b> Kegiatan fisik seperti yoga, seni bela diri, atau tari dapat membantu pembelajar kinestetik menyalurkan energi.</li>
+                            <li class="list-group-item"><b>Platform Online:</b> Coursera Projects: Pembelajaran berbasis proyek yang melibatkan praktik langsung.</li>
+                        </ul>
+                    </div>                    
+                    <!-- Tips for Kinesthetic Learners -->
+                    <div class="mt-4 mb-3">
+                        <h4 class="fw-bold">Tips untuk Pembelajar Kinestetik:</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item">Cobalah untuk melakukan eksperimen atau aktivitas praktis terkait materi yang sedang dipelajari.</li>
+                            <li class="list-group-item">Gunakan papan tulis atau alat peraga fisik untuk membantu memvisualisasikan konsep-konsep penting.</li>
+                            <li class="list-group-item">Berjalan-jalan atau bergerak saat belajar untuk meningkatkan fokus dan pemahaman.</li>
+                            <li class="list-group-item">Gunakan role play atau simulasi untuk memahami situasi atau konsep yang lebih kompleks.</li>
+                            <li class="list-group-item">Cobalah untuk membuat catatan dengan menggunakan tangan atau membuat model fisik untuk menjelaskan ide.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-5 d-flex justify-content-center align-items-center">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <image width="100%" height="100%" href="assets/Images/kinestetik.png" />
+                    </svg>
+                </div>
+            </div>
+
+
+
+        </div>
+    </main>
+</body>
+
+</html>

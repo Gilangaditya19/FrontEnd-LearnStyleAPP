@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <script src="assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>Result Test Learning Style</title>
+    <link rel="icon" href="assets/brand/learnstylelogo.png" type="image/png">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #EEDF7A;
+            --bd-violet-rgb: #EEDF7A;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: #A04747;
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #A04747;
+            --bs-btn-hover-border-color: #A04747;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #D8A25E;
+            --bs-btn-active-border-color: #D8A25E;
+        }
+
+        .btn-bd-secondary {
+            --bd-violet-bg: #A04747;
+            --bd-violet-rgb: #A04747;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #D8A25E;
+            --bs-btn-hover-border-color: #D8A25E;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #D8A25E;
+            --bs-btn-active-border-color: #D8A25E;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            margin: 0;
+        }
+
+        canvas {
+            max-width: 500px;
+            max-height: 500px;
+            width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 767px) {
+            header {
+                padding-top: 6rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+    // <link href="test.css" rel="stylesheet">
+</head>
+
+<body>
+    <header data-bs-theme="light">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light">
+            <div class="container-fluid">
+                <!-- Gambar di samping kiri judul navbar -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="assets/brand/learnstylelogo.png" alt="Logo"
+                        style="height: 40px; width: auto; margin-right: 10px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html"
+                                style="color: black;">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#informasi" style="color: black;">Informasi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#tentang" style="color: black;">Tentang</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <a href="materi.html" class="btn btn-bd-primary">Pelajari Gaya Belajarmu</a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main class="mt-5 w-100">
+        <div class="container marketing ">
+            <div class="row featurette">
+                <div id="container" class="glass p-3" style="position: relative;">
+                    <h2 id="learningStyle">Gaya Belajar Anda: Tidak Tersedia</h2>
+                    <h3>Saran:</h3>
+                    <ul id="suggestions">
+                        <li>Data belum tersedia. Silakan ulangi tes.</li>
+                    </ul>
+
+                    <div class="chart-container">
+                        <canvas id="chartjs-polar-area"></canvas>
+                    </div>
+                    <div class="d-flex gap-2" style="position: absolute; top: 16px; right: 16px;">
+                        <button class="btn btn-warning btn-sm" id="updateResultButton">Perbarui Hasil</button>
+                        <button class="btn btn-primary btn-sm" type="button"
+                            onclick="window.location.href='test.html'">Ulangi Test</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container marketing mt-5">
+            <div class="row featurette">
+                <div id="container" class="glass p-3" style="position: relative;">
+                    <h2 id="learningStylePersonal">Gaya Belajar Anda: Tidak Tersedia</h2>
+                    <h3>Saran:</h3>
+                    <ul id="suggestionsPersonal">
+                        <li>Data belum tersedia. Silakan ulangi tes.</li>
+                    </ul>
+
+                    <div class="chart-container">
+                        <canvas id="chartjs-polar-area-personal"></canvas>
+                    </div>
+                    <div class="d-flex gap-2" style="position: absolute; top: 16px; right: 16px;">
+                        <button class="btn btn-warning btn-sm" id="updateResultButton">Perbarui Hasil</button>
+                        <button class="btn btn-primary btn-sm" type="button"
+                            onclick="window.location.href='personalizedTest.html'">Ulangi Test</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let jsonData = JSON.parse(localStorage.getItem("result"));
+            let jsonDataPersonalized = JSON.parse(localStorage.getItem("resultPersonilized"));
+            console.log(jsonData, jsonDataPersonalized)
+
+            if (!jsonData) {
+                jsonData = {
+                    "predicted_style": "-",
+                    "probabilities": {
+                        "Auditory": 0,
+                        "Kinesthetic": 0,
+                        "Visual": 0
+                    }
+                };
+            }
+
+            if (!jsonDataPersonalized) {
+                jsonDataPersonalized = {
+                    learning_style: "-",
+                    probabilities: {
+                        Auditory: 0,
+                        Kinesthetic: 0,
+                        Visual: 0,
+                    },
+                    text: "-",
+                }
+            }
+
+            function updateResultFromJson(jsonData) {
+                document.getElementById("learningStyle").innerText = `Gaya Belajar Anda: ${jsonData.predicted_style}`;
+
+                const suggestions = {
+                    "Auditory": [
+                        "Cobalah lebih banyak audio pembelajaran.",
+                        "Gunakan metode berbicara untuk memahami materi.",
+                        "Pilih lingkungan yang tenang dan minimalkan gangguan suara luar.",
+                        "Gunakan headphone atau earphone berkualitas tinggi untuk pengalaman audio yang optimal.",
+                        "Cobalah untuk mendengarkan rekaman kuliah atau materi dalam format podcast.",
+                        "Tambahkan musik instrumental lembut sebagai latar untuk membantu konsentrasi."
+                    ],
+                    "Kinesthetic": [
+                        "Gunakan metode praktikum untuk belajar.",
+                        "Cobalah pendekatan berbasis aktivitas fisik.",
+                        "Gunakan alat peraga fisik seperti model 3D atau replika untuk memahami materi.",
+                        "Belajarlah di ruang terbuka untuk merasakan dinamika langsung.",
+                        "Cobalah untuk mencatat langsung dengan tangan untuk memproses informasi lebih baik.",
+                        "Gunakan permainan edukasi atau board games sebagai media pembelajaran."
+                    ],
+                    "Visual": [
+                        "Gunakan gambar dan grafik untuk memahami materi.",
+                        "Cobalah menonton video pendidikan.",
+                        "Gunakan ruang yang rapi dan terorganisir untuk mengurangi gangguan.",
+                        "Gunakan pencahayaan terang dan nyaman untuk mengurangi kelelahan mata.",
+                        "Tambahkan papan visual seperti whiteboard atau papan gabus untuk diagram dan pengingat.",
+                        "Gunakan bantuan visual yang dipersonalisasi seperti infografik, poster, atau peta pikiran."
+                    ]
+                };
+
+                const suggestionsList = document.getElementById("suggestions");
+                suggestionsList.innerHTML = "";
+                if (suggestions[jsonData.predicted_style]) {
+                    suggestions[jsonData.predicted_style].forEach(suggestion => {
+                        const li = document.createElement("li");
+                        li.textContent = suggestion;
+                        suggestionsList.appendChild(li);
+                    });
+                }
+
+                const chartData = [
+                    jsonData.probabilities.Auditory || 0,
+                    jsonData.probabilities.Kinesthetic || 0,
+                    jsonData.probabilities.Visual || 0
+                ];
+
+                new Chart(document.getElementById("chartjs-polar-area"), {
+                    type: "polarArea",
+                    data: {
+                        labels: ["Auditory", "Kinesthetic", "Visual"],
+                        datasets: [{
+                            label: "Distribusi Gaya Belajar",
+                            data: chartData,
+                            backgroundColor: ["#EEDF7A", "#A04747", "#343131"],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: "top",
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function (context) {
+                                        return `${context.label}: ${context.raw.toFixed(2)}`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            function updateResultFromJsonPersonilized(jsonDataPersonalized) {
+                console.log(jsonDataPersonalized);
+                document.getElementById("learningStylePersonal").innerText = `Gaya Belajar Anda: ${jsonDataPersonalized.learning_style}`;
+
+                const suggestions = {
+                    "Auditory": [
+                        "Cobalah lebih banyak audio pembelajaran.",
+                        "Gunakan metode berbicara untuk memahami materi.",
+                        "Pilih lingkungan yang tenang dan minimalkan gangguan suara luar.",
+                        "Gunakan headphone atau earphone berkualitas tinggi untuk pengalaman audio yang optimal.",
+                        "Cobalah untuk mendengarkan rekaman kuliah atau materi dalam format podcast.",
+                        "Tambahkan musik instrumental lembut sebagai latar untuk membantu konsentrasi.",
+                    ],
+                    "Kinesthetic": [
+                        "Gunakan metode praktikum untuk belajar.",
+                        "Cobalah pendekatan berbasis aktivitas fisik.",
+                        "Gunakan alat peraga fisik seperti model 3D atau replika untuk memahami materi.",
+                        "Belajarlah di ruang terbuka untuk merasakan dinamika langsung.",
+                        "Cobalah untuk mencatat langsung dengan tangan untuk memproses informasi lebih baik.",
+                        "Gunakan permainan edukasi atau board games sebagai media pembelajaran.", 
+                    ],
+                    "Visual": [
+                        "Gunakan gambar dan grafik untuk memahami materi.",
+                        "Cobalah menonton video pendidikan.",
+                        "Gunakan ruang yang rapi dan terorganisir untuk mengurangi gangguan.",
+                        "Gunakan pencahayaan terang dan nyaman untuk mengurangi kelelahan mata.",
+                        "Tambahkan papan visual seperti whiteboard atau papan gabus untuk diagram dan pengingat.",
+                        "Gunakan bantuan visual yang dipersonalisasi seperti infografik, poster, atau peta pikiran.",
+                    ]
+                };
+                
+
+                const suggestionsList = document.getElementById("suggestionsPersonal");
+                suggestionsList.innerHTML = "";
+                if (suggestions[jsonDataPersonalized.learning_style]) {
+                    suggestions[jsonDataPersonalized.learning_style].forEach(suggestion => {
+                        const li = document.createElement("li");
+                        li.textContent = suggestion;
+                        suggestionsList.appendChild(li);
+                    });
+                }
+
+                const chartData = [
+                    jsonDataPersonalized.probabilities.Auditory || 0,
+                    jsonDataPersonalized.probabilities.Kinesthetic || 0,
+                    jsonDataPersonalized.probabilities.Visual || 0
+                ];
+
+                new Chart(document.getElementById("chartjs-polar-area-personal"), {
+                    type: "polarArea",
+                    data: {
+                        labels: ["Auditory", "Kinesthetic", "Visual"],
+                        datasets: [{
+                            label: "Distribusi Gaya Belajar",
+                            data: chartData,
+                            backgroundColor: ["#EEDF7A", "#A04747", "#343131"],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: "top",
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function (context) {
+                                        return `${context.label}: ${context.raw.toFixed(2)}`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            updateResultFromJson(jsonData);
+            updateResultFromJsonPersonilized(jsonDataPersonalized);
+        });
+
+    </script>
+</body>
+
+</html>
